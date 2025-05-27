@@ -1,0 +1,58 @@
+.modal-image {
+	width: 100%;
+	height: auto;
+	max-height: 30rem;
+	object-fit: cover;
+	border-radius: 1rem;
+	opacity: 0.5;
+}
+
+.modal-title {
+	margin-top: 2rem;
+	font-size: 2rem;
+	font-family: var(--font-bebas);
+	letter-spacing: 0.1rem;
+	text-shadow: 0px 1px 1px rgb(0, 0, 0, 0.2);
+}
+
+.modal-source,
+.modal-date {
+	margin-top: 1rem;
+	font-size: 1.4rem;
+	font-family: var(--font-comfortaa);
+	color: var(--color-light-1);
+	letter-spacing: 0.1rem;
+}
+
+.modal-content-text {
+	margin: 2rem 0 3rem;
+	font-size: 1.6rem;
+	line-height: 1.7;
+	color: var(--color-light-2);
+	overflow-y: scroll;
+}
+
+.modal-content-text::-webkit-scrollbar {
+	display: none;
+}
+
+.link-btn {
+    display: inline-block;
+	width: 15rem;
+	padding: 1rem 2rem;
+	font-size: 1.6rem;
+	color: var(--color-white);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	background-image: linear-gradient(
+		to right,
+		var(--color-primary),
+		var(--color-secondary)
+	);
+	border-radius: 5rem;
+}
+
+.link-btn:active {
+	transform: translateY(0.1rem);
+}
