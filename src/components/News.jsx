@@ -47,17 +47,20 @@ function News({ onShowBlogs, blogs, onEditBlog, onDeleteBlog }) {
 	const [isError, setIsError] = useState(false)
 
 	useEffect(() => {
-		const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY
-		let url = `https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&lang=en&max=10&apikey=${NEWS_API_KEY}`
+		// const NEWS_API_KEY = import.meta.env.VITE_NEWS_API_KEY
+		let url = `https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&lang=en&max=10&apikey=${
+			import.meta.env.VITE_NEWS_API_KEY
+		}`
 
 		if (searchQuery) {
-			url = `https://gnews.io/api/v4/search?q=${searchQuery}&lang=en&max=10&apikey=${NEWS_API_KEY}`
+			url = `https://gnews.io/api/v4/search?q=${searchQuery}&lang=en&max=10&apikey=${
+				import.meta.env.VITE_NEWS_API_KEY
+			}`
 		}
 
 		const fetchNews = async () => {
 			try {
 				const response = await axios.get(url)
-				console.log(response);
 				const fechedNews = await response.data.articles
 				fechedNews.forEach(article => {
 					if (!article.image) {

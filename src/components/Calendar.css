@@ -88,7 +88,7 @@ position: relative;
 }
 
 .days span.current-day:after {
-	content: attr(currentDay);
+	content: attr(data-current-day);
 	width: 3.5rem;
 	height: 3.5rem;
 	font-size: 1.5rem;

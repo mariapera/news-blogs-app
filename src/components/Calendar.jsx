@@ -66,7 +66,7 @@ function Calendar() {
 								? 'current-day'
 								: ''
 						}
-						currentDay={
+						data-current-day={
 							day + 1 === currentDate.getDate() &&
 							currentMonth === currentDate.getMonth() &&
 							currentYear === currentDate.getFullYear()
