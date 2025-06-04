@@ -284,14 +284,16 @@ function News({ onShowBlogs, blogs, onEditBlog, onDeleteBlog }) {
 							)
 						})}
 					</div>
-					{selectedPost && showBlogsModal && (
-						<BlogsModal
-							show={showBlogsModal}
-							post={selectedPost}
-							onClose={handleBlogsModalClose}
-						/>
-					)}
 				</div>
+
+				{/* Blogs Modal */}
+				{selectedPost && showBlogsModal && (
+					<BlogsModal
+						show={showBlogsModal}
+						post={selectedPost}
+						onClose={handleBlogsModalClose}
+					/>
+				)}
 
 				{/* Weather and Calendar */}
 				<div className='weather-calendar'>
