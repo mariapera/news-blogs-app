@@ -61,14 +61,14 @@ function News({ onShowBlogs, blogs, onEditBlog, onDeleteBlog }) {
 		const fetchNews = async () => {
 			try {
 				const response = await axios.get(url)
-				const fechedNews = await response.data.articles
-				fechedNews.forEach(article => {
+				const fetchedNews = await response.data.articles
+				fetchedNews.forEach(article => {
 					if (!article.image) {
 						article.image = noImg
 					}
 				})
-				setHeadline(fechedNews[0])
-				setNews(fechedNews.slice(1, 7))
+				setHeadline(fetchedNews[0])
+				setNews(fetchedNews.slice(1, 7))
 				const savedBookmarks =
 					JSON.parse(localStorage.getItem('bookmarks')) || []
 				setBookmarks(savedBookmarks)
